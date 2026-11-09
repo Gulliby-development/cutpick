@@ -1,0 +1,6 @@
+*.db
+.phpunit.cache/
+.phpstan.cache/
+.pint.cache
+*.log
+vendor/

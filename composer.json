@@ -1,0 +1,27 @@
+{
+    "name": "gulliby/cutpick",
+    "description": "cutpick",
+    "type": "project",
+    "license": "MIT",
+    "require": {
+        "php": ">=8.2"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.18",
+        "phpstan/phpstan": "^2.1",
+        "phpunit/phpunit": "^11.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Cutpick\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Cutpick\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}

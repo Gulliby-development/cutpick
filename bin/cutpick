@@ -1,0 +1,15 @@
+#!/usr/bin/env php
+<?php
+
+declare(strict_types=1);
+
+require __DIR__ . '/../vendor/autoload.php';
+
+use Cutpick\Cli;
+
+$args = array_slice($argv, 1);
+$input = Cli::readsStdin($args) ? (string) stream_get_contents(STDIN) : '';
+$reply = Cli::run($args, $input);
+fwrite(STDOUT, $reply['out']);
+fwrite(STDERR, $reply['err']);
+exit($reply['status']);
